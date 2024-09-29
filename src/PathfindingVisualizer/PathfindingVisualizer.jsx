@@ -448,6 +448,7 @@ export default class PathfindingVisualizer extends Component {
                                     <div key={rowIndex}>
                                         {row.map((node, nodeIndex) => {
                                             const { x, y, isEnd, isStart, isWall, gridId } = node;
+                                            const length = row.length;
                                             return (
                                                 <Node
                                                     key={nodeIndex}
@@ -457,6 +458,7 @@ export default class PathfindingVisualizer extends Component {
                                                     isStart={isStart}
                                                     isWall={isWall}
                                                     gridId={gridId}
+                                                    length={length}
                                                 />
                                             );
                                         })}
